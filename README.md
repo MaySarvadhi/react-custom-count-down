@@ -7,13 +7,13 @@ A customizable countdown component for React.
 You can install the module via npm or yarn:
 
 
-`npm install react-custom-countdown --save`
+`npm install react-custom-count-down --save`
 
-`yarn add react-custom-countdown`
+`yarn add react-custom-count-down`
 
 ## How to Use?
 
-import { Countdown } from "react-custom-countdown";
+import { Countdown } from "react-custom-count-down";
 
 const timeTillDate = "08 05 2021, 11:15 am";
 const DATE_FORMAT = "MM DD YYYY, h:mm a"; //Date must be same as Date format ;
