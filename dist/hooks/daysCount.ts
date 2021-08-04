@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 
-interface daysProps {
+// interface daysProps {
+//   timeTillDate: string;
+//   timeFormat: string;
+// }
+
+export const useDaysCount = ({
+  timeTillDate,
+  timeFormat,
+}: {
   timeTillDate: string;
   timeFormat: string;
-}
-
-export const useDaysCount = (timeTillDate: string, timeFormat: string) => {
+}) => {
   const timeDiffCalc = () => {
     const dateFuture: any = new Date(timeTillDate);
     const dateNow: any = new Date();
@@ -23,7 +29,7 @@ export const useDaysCount = (timeTillDate: string, timeFormat: string) => {
     const seconds = Math.floor(diffInMilliSeconds) % 60;
     diffInMilliSeconds -= seconds * 60;
 
-    return { days, hours, minutes,seconds};
+    return { days, hours, minutes, seconds };
   };
   const [counterData, setCounterData] = useState(timeDiffCalc());
   setTimeout(() => {
