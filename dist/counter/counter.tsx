@@ -1,16 +1,17 @@
 import { SvgCircle } from "../SvgCircle/SvgCircle";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, ReactElement } from "react";
 import { useDaysCount } from "../hooks/daysCount";
 import "./counter.css";
 
-// interface CountdownProps {
-//   timeTillDate: string;
-//   timeFormat: string;
-// }
+interface CountdownProps {
+  timeTillDate: string;
+  timeFormat: string;
+}
 
-export const Countdown = (props) => {
-  const timeTillDate = props.timeTillDate;
-  const timeFormat = props.timeFormat;
+export const Countdown = ({
+  timeTillDate,
+  timeFormat,
+}: CountdownProps): ReactElement => {
   const counterData = useDaysCount(timeTillDate, timeFormat);
   const [days, setDays] = useState(counterData[0].days);
   const [hours, setHours] = useState(counterData[0].hours);
