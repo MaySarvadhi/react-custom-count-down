@@ -6,7 +6,6 @@ A customizable countdown component for React.
 
 You can install the module via npm or yarn:
 
-
 `npm install react-custom-count-down --save`
 
 `yarn add react-custom-count-down`
@@ -17,6 +16,8 @@ import { Countdown } from "react-custom-count-down";
 
 const timeTillDate = "08 05 2021, 11:15 am";
 const DATE_FORMAT = "MM DD YYYY, h:mm a"; //Date must be same as Date format ;
+you can change rounder stock color by this properties `colorOfStock`
+ex. `colorOfStock = '#000000'`
 
 you can achieve same date which one require in this component by this formula => moment(new Date()).format(DATE_FORMAT);
 
@@ -30,3 +31,4 @@ const App = () => {
   )
 }
 
+```
