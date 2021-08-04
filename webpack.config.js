@@ -32,6 +32,24 @@ module.exports = {
         use: ["ts-loader"],
       },
       {
+        test: /\.(ts|tsx)?$/,
+        include: path.resolve(__dirname, "src/component"),
+        use: [
+          {
+            loader: "ts-loader",
+          },
+        ],
+      },
+      {
+        test: /\.(ts|tsx)?$/,
+        include: path.resolve(__dirname, "dist/component"),
+        use: [
+          {
+            loader: "ts-loader",
+          },
+        ],
+      },
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
