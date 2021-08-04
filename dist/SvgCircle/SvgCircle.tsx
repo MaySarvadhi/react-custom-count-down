@@ -12,10 +12,18 @@ interface SvgProps {
   title?: string;
 }
 
-export const SvgCircle = ({size,progress,strokeWidth,circleOneStroke,circleTwoStroke,defaultValue,extraData,title}:SvgProps) => {
-
+export const SvgCircle = ({
+  size,
+  progress,
+  strokeWidth,
+  circleOneStroke,
+  circleTwoStroke,
+  defaultValue,
+  extraData,
+  title,
+}: SvgProps) => {
   const [offset, setOffset] = useState(0);
-  const circleRef = useRef(null);
+  const circleRef: any = useRef(null);
 
   const center = size / 2;
   const radius = size / 2 - strokeWidth / 2;

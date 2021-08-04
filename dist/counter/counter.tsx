@@ -6,11 +6,13 @@ import "./counter.css";
 interface CountdownProps {
   timeTillDate: string;
   timeFormat: string;
+  colorOfStock?: string;
 }
 
 export const Countdown = ({
   timeTillDate,
   timeFormat,
+  colorOfStock,
 }: CountdownProps): ReactElement => {
   const counterData = useDaysCount(timeTillDate, timeFormat);
   const [days, setDays] = useState(counterData[0].days);
@@ -41,7 +43,7 @@ export const Countdown = ({
             progress={days}
             strokeWidth={5}
             circleOneStroke="#7ea9e1"
-            circleTwoStroke={color}
+            circleTwoStroke={colorOfStock ? colorOfStock : color}
             defaultValue={365}
             extraData={seconds}
           />
@@ -55,7 +57,7 @@ export const Countdown = ({
             progress={hours}
             strokeWidth={5}
             circleOneStroke="#7ea9e1"
-            circleTwoStroke={color}
+            circleTwoStroke={colorOfStock ? colorOfStock : color}
             defaultValue={24}
             extraData={seconds}
           />
@@ -69,7 +71,7 @@ export const Countdown = ({
             progress={minutes}
             strokeWidth={5}
             circleOneStroke="#7ea9e1"
-            circleTwoStroke={color}
+            circleTwoStroke={colorOfStock ? colorOfStock : color}
             defaultValue={60}
             extraData={seconds}
           />
@@ -83,7 +85,7 @@ export const Countdown = ({
               progress={seconds}
               strokeWidth={5}
               circleOneStroke="#7ea9e1"
-              circleTwoStroke={color}
+              circleTwoStroke={colorOfStock ? colorOfStock : color}
               defaultValue={60}
               extraData={seconds}
             />
