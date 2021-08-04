@@ -1,7 +1,16 @@
 {
   "name": "react-custom-count-down",
   "version": "0.1.0",
-  "private": true,
+  "description": "count down with smooth animation",
+  "license": "MIT",
+  "author": "Mayur Solanki <mayur.solanki@iblinfotech.com>",
+  "keywords": [
+    "react-countdown",
+    "countdown",
+    "animation",
+    "custom-countdown"
+  ],
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
