@@ -15,16 +15,25 @@ module.exports = {
 
   // file resolutions
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".js", ".tsx"],
   },
 
   // loaders
   module: {
     rules: [
       {
-        test: /\.tsx?/,
-        use: "ts-loader",
+        test: /\.js$/,
         exclude: /node_modules/,
+        use: ["ts-loader"],
+      },
+      {
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        use: ["ts-loader"],
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
