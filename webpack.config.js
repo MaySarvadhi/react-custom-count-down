@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.(ts|tsx)?$/,
-        include: path.resolve(__dirname, "src/component"),
+        include: path.resolve(__dirname, "./src/component"),
         use: [
           {
             loader: "ts-loader",
@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.(ts|tsx)?$/,
-        include: path.resolve(__dirname, "dist/component"),
+        include: path.resolve(__dirname, "./dist/component"),
         use: [
           {
             loader: "ts-loader",
