@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-export const useDaysCount =(timeTillDate:string, timeFormat:string) => {
+export const useDaysCount =(timeTillDate, timeFormat) => {
   const timeDiffCalc = () => {
-    const dateFuture: any = new Date(timeTillDate);
-    const dateNow: any = new Date();
+    const dateFuture = new Date(timeTillDate);
+    const dateNow = new Date();
     let diffInMilliSeconds = Math.abs(dateFuture - dateNow) / 1000;
 
     const days = Math.floor(diffInMilliSeconds / 86400);

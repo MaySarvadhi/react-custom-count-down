@@ -3,17 +3,14 @@ import React, { useEffect, useState, ReactElement } from "react";
 import { useDaysCount } from "../hooks/daysCount";
 import "./counter.css";
 
-interface CountdownProps {
-  timeTillDate: string;
-  timeFormat: string;
-  colorOfStock?: string;
-}
+// interface CountdownProps {
+//   timeTillDate: string;
+//   timeFormat: string;
+//   colorOfStock?: string;
+// }
 
-export const Countdown = ({
-  timeTillDate,
-  timeFormat,
-  colorOfStock,
-}: CountdownProps): ReactElement => {
+export const Countdown = (props) => {
+  const { timeTillDate, timeFormat, colorOfStock } = props;
   const counterData = useDaysCount(timeTillDate, timeFormat);
   const [days, setDays] = useState(counterData[0].days);
   const [hours, setHours] = useState(counterData[0].hours);

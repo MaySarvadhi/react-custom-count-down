@@ -1,29 +1,30 @@
 import React, { useState, useRef, useEffect, ReactElement } from "react";
 import "./svgCircle.css";
 
-interface SvgProps {
-  size: number;
-  progress: number;
-  strokeWidth: number;
-  circleOneStroke: string;
-  circleTwoStroke: string;
-  defaultValue: number;
-  extraData?: number;
-  title?: string;
-}
+// interface SvgProps {
+//   size: number;
+//   progress: number;
+//   strokeWidth: number;
+//   circleOneStroke: string;
+//   circleTwoStroke: string;
+//   defaultValue: number;
+//   extraData?: number;
+//   title?: string;
+// }
 
-export const SvgCircle = ({
-  size,
-  progress,
-  strokeWidth,
-  circleOneStroke,
-  circleTwoStroke,
-  defaultValue,
-  extraData,
-  title,
-}: SvgProps) => {
+export const SvgCircle = (props) => {
+  const {
+    size,
+    progress,
+    strokeWidth,
+    circleOneStroke,
+    circleTwoStroke,
+    defaultValue,
+    extraData,
+    title,
+  } = props;
   const [offset, setOffset] = useState(0);
-  const circleRef: any = useRef(null);
+  const circleRef = useRef(null);
 
   const center = size / 2;
   const radius = size / 2 - strokeWidth / 2;
