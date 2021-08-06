@@ -23,6 +23,6 @@ export const useDaysCount =(timeTillDate:string, timeFormat:string) => {
   const [counterData, setCounterData] = useState(timeDiffCalc());
   setTimeout(() => {
     setCounterData(timeDiffCalc());
-  }, 10000);
+  }, 1000);
   return [counterData];
 };
