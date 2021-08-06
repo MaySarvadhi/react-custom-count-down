@@ -1,4 +1,4 @@
-import { SvgCircle } from "../SvgCircle/SvgCircle";
+import { SvgCircle } from "../SvgCircle/SvgCircle.d";
 import React, { useEffect, useState, ReactElement } from "react";
 import { useDaysCount } from "../hooks/daysCount";
 import "./counter.css";
